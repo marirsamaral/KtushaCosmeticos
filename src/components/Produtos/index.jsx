@@ -1,4 +1,5 @@
-import { products } from '../../data/products.js'
+import { Link } from 'react-router-dom';
+import { products } from '../../data/products.js';
 import './produtos.css'
 
 export default function Produtos() {
@@ -25,9 +26,13 @@ export default function Produtos() {
               <h3 className="produto-card__nome">{produto.nome}</h3>
               <p className="produto-card__descricao">{produto.descricao}</p>
               <span className="produto-card__preco">{produto.preco}</span>
-              <a href="#" className="produto-card__link">
+              <Link 
+                to="/produtos" 
+                className="produto-card__link"
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 Saiba mais
-              </a>
+              </Link>
             </article>
           ))}
         </div>
