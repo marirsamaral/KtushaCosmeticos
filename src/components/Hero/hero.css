@@ -1,0 +1,44 @@
+.hero-carousel-container {
+  width: 100%;
+  padding: 20px 20px;
+  overflow: hidden;
+}
+
+/* Formatação do cartão de cada banner */
+.hero-swiper .swiper-slide .banner-card {
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.hero-swiper .swiper-slide img {
+  max-width: 100%; /* Impede que fique mais larga que o container */
+  max-height: 500px; /* Altere este valor para a altura que você deseja */
+  object-fit: contain; /* Garante que a imagem caiba sem distorcer */
+}
+
+/* Personalização das setas de navegação */
+.hero-swiper .swiper-button-next,
+.hero-swiper .swiper-button-prev {
+background-color: rgba(255, 255, 255, 0.75); /* Fundo translúcido */
+  backdrop-filter: blur(4px); /* Efeito fosco suave */
+  color: #f1ab71; /* cor do botão */
+  width: 30px; 
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease-in-out;
+}
+
+.hero-swiper .swiper-button-next::after,
+.hero-swiper .swiper-button-prev::after {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Personalização dos pontos indicadores */
+.hero-swiper .swiper-pagination-bullet-active {
+  background-color: #ffffff;
+}

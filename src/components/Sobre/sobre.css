@@ -1,0 +1,22 @@
+.sobre {
+  padding: clamp(3rem, 7vw, 5.5rem) 0;
+  border-top: 1px solid var(--line);
+  background: #ffae63;
+}
+
+.sobre__inner {
+  max-width: 56ch;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sobre__title {
+  font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+  color: black;
+}
+
+.sobre__body {
+  color: black;
+  
+}

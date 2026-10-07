@@ -1,0 +1,173 @@
+.avaliacoes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.avaliacoes-titulo {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #f0eded;
+  margin-bottom: 24px;
+}
+
+.avaliacoes-titulo span {
+  color: #ffae63; /* Verde sutil do título */
+}
+
+/* Container do Grid/Carrossel */
+.avaliacoes-grid-wrapper {
+  position: relative;
+}
+
+.avaliacoes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+/* Esconde a barra de rolagem */
+.avaliacoes-grid::-webkit-scrollbar {
+  display: none;
+}
+.avaliacoes-grid {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Card Individual */
+.avaliacao-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Imagem do Cliente */
+.avaliacao-imagem-box {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.avaliacao-foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tag escura de produto na foto */
+.avaliacao-produto-tag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0b2b1a; /* Verde bem escuro estilo K'tusha */
+  color: #ffffff;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.produto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 75%;
+}
+
+.produto-nome {
+  font-size: 0.75rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #e2e8f0;
+}
+
+.compra-rapida-link {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.produto-thumb {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+/* Detalhes do Cliente e Estrelas abaixo do card */
+.avaliacao-detalhes {
+  text-align: center;
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.estrelas {
+  color: #fbbf24; /* Amarelo dourado das estrelas */
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+.cliente-nome {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+
+/* Botão Flutuante 'Próximo' */
+.btn-proximo {
+  position: absolute;
+  right: -16px;
+  top: 35%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+
+.btn-proximo:hover {
+  transform: translateY(-50%) scale(1.08);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+  .avaliacoes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .avaliacoes-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .btn-proximo {
+    display: none;
+  }
+}

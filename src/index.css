@@ -78,13 +78,6 @@ button {
   padding: 0 var(--gutter);
 }
 
-.section-label {
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  color: var(--gold);
-  font-weight: 600;
-}
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -98,7 +91,7 @@ button {
 }
 
 .btn-primary {
-  background: var(--gold);
+  background: #faad47;
   color: var(--black);
 }
 
